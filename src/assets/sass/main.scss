@@ -508,3 +508,9 @@ a { color:var(--color-gold); }
   .rw-RuneSidebar {flex-basis:105px;}
   .rw-Table-tdTitle {min-width:205px;}
 }
+
+/* Keep item-type column tight to its content instead of stretching to fill the viewport. */
+.rw-Table { width: max-content; max-width: none; table-layout: auto; }
+.rw-Table-tdType { width: auto; min-width: 0; max-width: 360px; padding-left: 3px; padding-right: 3px; }
+.rw-Table-th:nth-child(8) { padding-left: 4px; padding-right: 4px; }
+.rw-Table-td:last-child, .rw-Table-th:last-child { min-width: 46px; }

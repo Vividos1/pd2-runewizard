@@ -214,6 +214,7 @@ const runewords: TRuneword[] = [
     runes: ["Lem", "Ist", "Io"],
     level: 51,
     ttypes: ["Helms"],
+    version: 'S14 Upd',
   },
   {
     title: "Doom",
@@ -240,6 +241,7 @@ const runewords: TRuneword[] = [
     runes: ["Amn", "Ber", "Ist", "Sol", "Sur"],
     level: 63,
     ttypes: ["Melee Weapons"],
+    version: 'S14 Upd',
   },
   {
     title: "Exile",
@@ -253,19 +255,21 @@ const runewords: TRuneword[] = [
     runes: ["Fal", "Ohm", "Ort", "Jah"],
     level: 65,
     ttypes: ["Axes", "Hammers", "Swords"],
+    version: 'S14 Upd',
   },
   {
     title: "Gloom",
     runes: ["Fal", "Um", "Pul"],
     level: 47,
     ttypes: ["Body Armors"],
-    version: ''
+    version: 'S14 Upd'
   },
   {
     title: "Hand of Justice",
     runes: ["Sur", "Cham", "Amn", "Lo"],
     level: 67,
     ttypes: ["Weapons"],
+    version: 'S14 Upd',
   },
   {
     title: "Heart of the Oak",
@@ -676,7 +680,7 @@ const runewords: TRuneword[] = [
     runes: ["Lo", "Ith", "Lo", "Ist"],
     level: 59,
     ttypes: ["Shields"],
-    version: ''
+    version: 'S14 Upd'
   },
 
   {

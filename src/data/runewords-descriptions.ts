@@ -371,7 +371,7 @@ const runewordsDesc: TRunewordMeta = {
 	+20% Increased Attack Speed
 	+180-220% Enhanced Damage (varies)
 	Ignore Target's Defense
-	-10-15% To Enemy Lightning Resistance (varies)
+	-15-20% To Enemy Lightning Resistance (varies)
 	10% Chance of Open Wounds
   +120 Open Wounds Damage Per Second
 	+3-5 Magic Absorb (varies)
@@ -380,6 +380,10 @@ const runewordsDesc: TRunewordMeta = {
   `,
 
   Delirium: `
+  +1 To Delirium Form (oskill)
+  Delirium Form: Abilities Cannot Be Used
+  Delirium Form: -10% To Enemy Physical Resistance
+  Delirium Form: Ignores Target's Defense
   6% Chance To Cast Level 14 Mind Blast When Struck
 	11% Chance To Cast Level 18 Confuse On Striking
   14% Chance To Cast Level 13 Terror When Struck
@@ -442,7 +446,7 @@ const runewordsDesc: TRunewordMeta = {
 	Adds 70-71 Damage
 	7% Life Stolen Per Hit
 	20% Chance of Crushing Blow
-  +4 To Revive
+  +12 To Revive
 	+4 Life After Each Kill
 	You May Now Summon 6 Additional Revives
 	10% Reanimate As: Wraith
@@ -472,8 +476,8 @@ const runewordsDesc: TRunewordMeta = {
 	Adds 101-275 Lightning Damage
 	Adds 100-225 Cold Damage
 	-10-15% To Enemy Lightning Resistance (varies)
-	-10-15% To Enemy Cold Resistance (varies)
-	-10-15% To Enemy Fire Resistance (varies)
+	-15-20% To Enemy Cold Resistance (varies)
+	-15-20% To Enemy Fire Resistance (varies)
 	+10 To Strength
   `,
 
@@ -490,19 +494,19 @@ const runewordsDesc: TRunewordMeta = {
 
   Gloom: `
   15% Chance To Cast Level 9 Dim Vision When Struck
-	+20-40% Faster Hit Recovery (varies)
+	+20% Faster Hit Recovery
 	+220-280% Enhanced Defense (varies)
 	+10 To Strength
 	All Resistances +45
 	Half Freeze Duration
-	5% Damage Taken Goes To Mana
-	+20% Curse Resistance
+	+1 To Maximum Curses
+	+30-40% Curse Resistance (varies)
   `,
 
   "Hand of Justice": `
   100% Chance To Cast Level 36 Blaze When You Level-Up
 	100% Chance To Cast Level 48 Meteor When You Die
-	Level 12 Holy Fire Aura When Equipped
+	Level 14 Holy Fire Aura When Equipped
 	+33% Increased Attack Speed
 	+280-330% Enhanced Damage (varies)
 	Ignore Target's Defense
@@ -1298,8 +1302,8 @@ const runewordsDesc: TRunewordMeta = {
   Epiphany: `
   25% Chance To Cast Level 27 Static Field When Struck
   Level 18 Energy Shield When Equipped
-  20% Faster Cast Rate
-  Adds 1-750 Lightning Damage
+  35% Faster Cast Rate
+  Adds 1-1250 Lightning Damage
   +10-15 To All Attributes (varies)
   Increase Maximum Mana 28-35% (varies)
   +8% To Maximum Lightning Resistance
