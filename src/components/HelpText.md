@@ -18,7 +18,16 @@ The runes are listed in order of rarity, from top to bottom, and left to right. 
 
 ## Runewords
 
-**Season 13 New and Updated Runewords** have a small <span class="rw-Table-tdTitlePatch">S13 New/Upd</span> icon next to the name.
+Patch badges identify runewords that were **introduced** or **changed** in a recent PD2 season:
+
+- <span class="rw-Table-tdTitlePatch patch-s14">S14 New</span> — New runewords introduced in **Season 14: Alliance**.
+- <span class="rw-Table-tdTitlePatch patch-s14">S14 Upd</span> — Existing runewords with stats or mechanics changed in Season 14.
+- <span class="rw-Table-tdTitlePatch patch-s13">S13 New</span> — New runewords introduced in Season 13.
+- <span class="rw-Table-tdTitlePatch patch-s13">S13 Upd</span> — Existing runewords revised in Season 13.
+
+**Green badges indicate Season 14 changes; blue badges indicate Season 13 changes.** A badge is a patch-history label, not a requirement to play that season. Runewords without a badge are still included in the database.
+
+Click a runeword's name to view its full modifiers and use the item-type filters to narrow the list.
 
 ## Note about storage
 
