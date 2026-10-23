@@ -485,3 +485,26 @@ a { color:var(--color-gold); }
 .rw-Table-tdType {line-height:1.4}
 .rw-Table-tdTypeClass {margin-top:.2rem}
 @media(max-width:800px){.rwf-top-row,.rwf-sub-row{gap:.3rem}.rwf-btn{padding:.4rem .55rem}.rw-Table{font-size:12px}}
+
+/* Compact layout: full 9-column table visible at desktop widths. */
+.rw-Layout-rowContainer {max-width: 1500px; width:100%; margin-inline:auto; padding-left:1.25rem; padding-right:1.25rem;}
+.rw-Main {align-items:flex-start; gap:.8rem;}
+.rw-RuneSidebar {flex:0 0 124px; margin-right:0;}
+.rw-RunewordsContent {min-width:0; overflow-x:auto;}
+.rw-Table {font-size:12.5px; width:100%; table-layout:auto;}
+.rw-Table-th {padding:.36rem .25rem;}
+.rw-Table-td {padding:2px 3px; line-height:1.15; height:27px;}
+.rw-Table-tdTitle {min-width:220px; width:220px; padding:2px 22px 2px 4px !important; white-space:nowrap;}
+.rw-Table-tdTitleSpan {font-size:.9rem; padding:1px 2px !important; display:inline !important;}
+.rw-Table-tdTitlePatch {margin-left:5px; padding:2px 4px; font-size:.62rem; line-height:1; white-space:nowrap;}
+.rw-Table-pin {width:17px; right:2px;}
+.rw-Table-td.is-rune {min-width:35px; padding-inline:2px; white-space:nowrap;}
+.rw-Table-tdType {min-width:205px; width:auto; font-size:.78rem; white-space:normal;}
+.rw-Table-td:last-child,.rw-Table-th:last-child {width:48px; min-width:48px; white-space:nowrap;}
+.rw-Table-tdTypeClass {margin-top:0;}
+.rw-Header {width:100%;}
+@media(max-width:900px) {
+  .rw-Layout-rowContainer {padding-inline:.65rem;}
+  .rw-RuneSidebar {flex-basis:105px;}
+  .rw-Table-tdTitle {min-width:205px;}
+}

@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="rw-Search flex items-center mb-8">
+    <div class="rw-Search flex items-center mb-4">
       <label class="text-gold whitespace-nowrap mr-4">{{ "Search" }}</label>
       <input v-model="searchText" type="text" class="rw-Search-input" @input="onSearchInput" />
     </div>
 
     <runeword-filters
       :available-ttypes="availableTtypes"
-      class="mb-8"
+      class="mb-4"
       @filter-change="onFilterChange"
     />
 

@@ -54,7 +54,7 @@
             display: item.filterMatch ? '' : 'none',
           }"
         >
-          <td class="rw-Table-td rw-Table-tdTitle p-0 text-left relative min-w-[10em]">
+          <td class="rw-Table-td rw-Table-tdTitle p-0 text-left relative">
             <span
               class="rw-Table-tdTitleSpan cursor-pointer"
               @mouseenter="onEnterRuneword($event, item)"
@@ -105,7 +105,7 @@
               item.runes[5]
             }}
           </td>
-          <td class="rw-Table-td rw-Table-tdType min-w-[10em]" v-html="getTypeCellHtml(item)"></td>
+          <td class="rw-Table-td rw-Table-tdType" v-html="getTypeCellHtml(item)"></td>
           <td class="rw-Table-td">{{ item.level }}</td>
         </tr>
       </template>

@@ -1,11 +1,11 @@
 <template>
   <app-header v-if="useLayoutHeader" />
 
-  <main class="rw-Layout-rowContainer rw-Main py-4 flex mb-24">
-    <div class="mr-16">
+  <main class="rw-Layout-rowContainer rw-Main py-3 flex mb-14">
+    <div class="mr-5 rw-RuneSidebar">
       <runes />
     </div>
-    <div class="overflow-auto flex-1">
+    <div class="min-w-0 flex-1 rw-RunewordsContent">
       <runewords />
     </div>
   </main>
@@ -33,7 +33,7 @@ export default defineComponent({
 
   computed: {
     useLayoutHeader(): boolean {
-      return import.meta.env.VITE_LAYOUT_HEADER === "true";
+      return true;
     },
   },
 });
