@@ -62,7 +62,7 @@
               @click="onEnterRuneword($event, item)"
             >{{ item.title }}</span>
             <span v-if="item.ladder" class="rw-Md-ladder" title="Ladder Only">L</span>
-            <span v-if="item.version" class="rw-Table-tdTitlePatch" title="Patch version">{{ item.version }}</span>
+            <span v-if="item.version" class="rw-Table-tdTitlePatch" :class="{ 'patch-s14': item.version.includes('S14'), 'patch-s13': item.version.includes('S13') }" title="Patch version">{{ item.version }}</span>
 
             <div
               v-if="pinnedRunewords.has(item.title)"

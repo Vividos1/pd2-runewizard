@@ -1,44 +1,16 @@
 <template>
-  <footer class="rw-Footer min-h-[200px]">
+  <footer class="rw-Footer min-h-[160px]">
     <div class="rw-Layout-goldBarSeparator opacity-50 mb-6"></div>
-
-    <div class="text-center text-lg text-gold leading-1">
-      <div>
-        Maintenance
-        <a :href="envGithubRepoUrl" class="rw-Footer-link ml-2">
-          <icon-github class="ux-icon ux-icon--fw mr-1 mt-[-0.2em]" />
-          <span class>{{ "kvothed2/pd2-runewizard" }}</span>
-        </a>
+    <div class="text-center text-sm leading-relaxed">
+      <div>PD2 Season 14 Runewizard maintained at
+        <a class="rw-Footer-link" href="https://github.com/Vividos1/pd2-runewizard" target="_blank" rel="noopener">Vividos1/pd2-runewizard</a>
       </div>
-      <br>
-      <div>
-        Original
-        <a :href="'https://github.com/fabd/diablo2-runewizard'" class="rw-Footer-link ml-2">
-          <icon-github class="ux-icon ux-icon--fw mr-1 mt-[-0.2em]" />
-          <span class>{{ "fabd/diablo2-runewizard" }}</span>
-        </a>
+      <div>Adapted from <a class="rw-Footer-link" href="https://github.com/kvothed2/pd2-runewizard" target="_blank" rel="noopener">kvothed2/pd2-runewizard</a>
+        · Original <a class="rw-Footer-link" href="https://github.com/fabd/diablo2-runewizard" target="_blank" rel="noopener">fabd/diablo2-runewizard</a>
+      </div>
+      <div><a class="rw-Footer-link" href="https://github.com/Vividos1/diablo2-runewizard" target="_blank" rel="noopener">RotW Runewizard</a> ·
+        <a class="rw-Footer-link" href="https://wiki.projectdiablo2.com/wiki/Patch_Notes" target="_blank" rel="noopener">PD2 Patch Notes</a>
       </div>
     </div>
   </footer>
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-
-import IconGithub from "@/icons/IconGithub.vue";
-
-export default defineComponent({
-  name: "AppFooter",
-
-  components: {
-    IconGithub,
-  },
-
-  data() {
-    return {
-      envGithubRepoUrl: import.meta.env.VITE_URL_GITHUB_REPO as string,
-      envMainSiteUrl: import.meta.env.VITE_URL_MAIN_SITE as string,
-    };
-  },
-});
-</script>

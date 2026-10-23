@@ -4,8 +4,8 @@
     <div class="rw-Layout-rowContainer h-[106px] flex">
       <div class="pr-[20px] pt-[17px]">
         <img
-          src="@assets/images/logo-rune.png"
-          alt="Rune icon original art (c) BLIZZARD ENTERTAINMENT"
+          src="@assets/images/codex.png"
+          alt="Runewizard codex icon"
           class="w-[69px] h-[67px]"
         />
       </div>
@@ -18,9 +18,18 @@
           />
         </h1>
         <div class="flex justify-between items-center">
-          <div class="text-lg text-[#e9bf40]">
-            for <span class="text-[#e9bf40] font-bold">{{ envGameName }}</span>
-            <span class="ml-2 text-[#90b7ff]">{{ envGameVersion }}</span>
+          <div class="text-lg ux-color-gray">
+            for <span class="ux-color-gold">{{ envGameName }}</span>
+            <span class="ml-2 ux-color-green">{{ envGameVersion }}</span>
+
+            <span class="text-xs">
+              <a
+                class="ml-2 underline hover:underline ux-color-link-blue"
+                target="blank"
+                :href="envPatchNotesUrl"
+                >Update Notes</a
+              >
+            </span>
           </div>
 
           <div class="flex items-center text-[#514f4a]">
@@ -37,9 +46,9 @@
               /><span class="ml-1">{{ "Help" }}</span>
             </a>
 
-            <a :href="`https://discord.gg/DWYBG2qd3u`" class="rw-Header-link">
+            <a :href="`${envGithubRepoUrl}/discussions`" class="rw-Header-link">
               <icon-chat class="ux-icon ux-icon--fw ux-icon--lg mr-1" />
-              <span>{{ "Discord" }}</span>
+              <span>{{ "Feedback" }}</span>
             </a>
           </div>
         </div>
@@ -77,10 +86,10 @@ export default defineComponent({
     return {
       isHelpVisible: false,
 
-      envGameName: /**@type {string}*/ (import.meta.env.VITE_GAME_NAME),
-      envGameVersion: /**@type {string}*/ (import.meta.env.VITE_GAME_VERSION),
-      envGithubRepoUrl: /**@type {string}*/ (import.meta.env
-        .VITE_URL_GITHUB_REPO),
+      envGameName: import.meta.env.VITE_GAME_NAME as string,
+      envGameVersion: import.meta.env.VITE_GAME_VERSION as string,
+      envGithubRepoUrl: import.meta.env.VITE_URL_GITHUB_REPO as string,
+      envPatchNotesUrl: import.meta.env.VITE_URL_PATCH_NOTES as string,
     };
   },
 });

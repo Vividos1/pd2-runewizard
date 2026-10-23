@@ -460,3 +460,28 @@ a { color:var(--color-gold); }
 // (last) tailwind utilities
 // --------------------------------------------------------------------
 @import "tailwindcss/utilities";
+
+/* PD2 S13 category filters — restored after RotW theme integration */
+.rwf-wrap { margin: .6rem 0 1rem; padding: .65rem .75rem; border: 1px solid #4b3a2b; border-radius: 6px; background: #100e12; }
+.rwf-top-row,.rwf-sub-row { display:flex; flex-wrap:wrap; align-items:center; gap:.45rem; }
+.rwf-sub-row { margin-top:.7rem; padding-top:.7rem; border-top:1px solid #443a35; }
+.rwf-btn,.rwf-clear { display:inline-flex; align-items:center; justify-content:center; gap:.35rem; white-space:nowrap; padding:.46rem .75rem; background:#282126; border:1px solid #796044; border-radius:4px; color:#d8c6a2; font-size:.83rem; line-height:1.2; cursor:pointer; transition:background .12s,border-color .12s; }
+.rwf-btn:hover,.rwf-clear:hover { background:#4c3440; border-color:#d6ac5f; color:#fff0cf; }
+.rwf-btn--active { background:#513525; border-color:#e0aa4a; color:#ffe6a3; box-shadow:inset 0 0 0 1px #8b6034; }
+.rwf-btn--sub { background:#201d22; font-size:.78rem; }
+.rwf-clear { margin-left:auto; border-color:#9c514c; color:#e8a9a4; }
+.rwf-arrow {font-size:.85rem; transition:transform .12s}
+.rwf-arrow--open {transform:rotate(180deg)}
+.rwf-sub-hint {font-size:.7rem; color:#a19a92; padding-left:.35rem}
+.rw-Table {width:100%; border-collapse:collapse; table-layout:auto;}
+.rw-Table-th {white-space:nowrap; padding:.5rem .4rem}
+.rw-Table-td {padding:.42rem .4rem; line-height:1.35; vertical-align:middle}
+.rw-Table-tdTitle {padding:.25rem 1.8rem .25rem .35rem !important; min-width:12.5rem;}
+.rw-Table-tdTitleSpan {padding:.2rem .35rem !important; line-height:1.35;}
+.rw-Table-tdTitlePatch {display:inline-block; margin:.15rem .15rem .15rem .35rem; padding:.22rem .42rem; font-size:.65rem; font-weight:700; letter-spacing:.02em; line-height:1.15; border-radius:4px; vertical-align:middle; white-space:nowrap;}
+.rw-Table-tdTitlePatch.patch-s13 {background:#234d79; color:#dceeff; border:1px solid #4780b9;}
+.rw-Table-tdTitlePatch.patch-s14 {background:#256e45; color:#e4ffed; border:1px solid #60be7b;}
+.rw-Table-pin {right:.1rem;}
+.rw-Table-tdType {line-height:1.4}
+.rw-Table-tdTypeClass {margin-top:.2rem}
+@media(max-width:800px){.rwf-top-row,.rwf-sub-row{gap:.3rem}.rwf-btn{padding:.4rem .55rem}.rw-Table{font-size:12px}}
