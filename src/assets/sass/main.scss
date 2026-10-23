@@ -557,3 +557,17 @@ a { color:var(--color-gold); }
 .rw-Header-tombLink img {width:155px;height:61px;object-fit:cover;border:1px solid #66513a;border-radius:3px;opacity:.94;}
 .rw-Header-tombLink:hover img {border-color:#caa16a;opacity:1;}
 @media(max-width:700px){.rw-Reference{padding:0 8px}.rw-Header-tombLink img{width:100px;height:39px}}
+
+/* Header quick-reference toolbar: image next to wordmark, controls after image */
+.rw-HeaderBar {display:flex;align-items:center;gap:18px;min-height:112px;height:auto;padding-top:10px;padding-bottom:10px;flex-wrap:wrap;}
+.rw-HeaderIcon {flex:none;}
+.rw-HeaderBrand {flex:0 0 380px;min-width:320px;}
+.rw-HeaderBrand h1 {margin-top:0;}
+.rw-HeaderBrand .flex.justify-between {gap:12px;}
+.rw-Header-tombLink {margin:0;flex:0 0 auto;align-self:center;}
+.rw-Header-tombLink img {width:155px;height:61px;display:block;object-fit:cover;}
+.rw-HeaderReferences {flex:1 1 400px;min-width:260px;max-width:none;margin:0;padding:0;position:relative;align-self:center;z-index:40;}
+.rw-HeaderReferences .rw-ReferenceButtons {gap:5px;justify-content:flex-start;}
+.rw-HeaderReferences .rw-ReferenceButtons button {padding:5px 7px;white-space:nowrap;font-size:11px;}
+.rw-HeaderReferences .rw-ReferencePanel {position:absolute;top:calc(100% + 22px);left:0;width:min(1060px,calc(100vw - 32px));max-width:none;max-height:75vh;overflow:auto;box-shadow:0 12px 28px #000c;z-index:1000;}
+@media(max-width:1100px){.rw-HeaderBrand {flex-basis:350px}.rw-HeaderReferences {flex-basis:100%;padding-left:0}.rw-HeaderBar {gap:10px}.rw-HeaderReferences .rw-ReferencePanel{top:calc(100% + 12px)}}

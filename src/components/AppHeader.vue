@@ -1,16 +1,16 @@
 <template>
   <!-- optional header to decorate the stand alone version -->
   <header>
-    <div class="rw-Layout-rowContainer h-[106px] flex">
-      <div class="pr-[20px] pt-[17px]">
+    <div class="rw-Layout-rowContainer rw-HeaderBar">
+      <div class="rw-HeaderIcon">
         <img
           src="@assets/images/codex.png"
           alt="Runewizard codex icon"
           class="w-[69px] h-[67px]"
         />
       </div>
-      <div class="flex-1">
-        <h1 class="text-black text-[0px] mt-[19px] mb-[5px] w-[301px] h-[32px]">
+      <div class="rw-HeaderBrand">
+        <h1 class="text-black text-[0px] mb-[5px] w-[301px] h-[32px]">
           <img
             src="@assets/images/logo-text-runewizard.png"
             alt="PD2 Runewizard"
@@ -30,9 +30,7 @@
                 >Update Notes</a
               >
             </span>
-            <a class="rw-Header-tombLink"  :href="tombRefUrl" target="_blank" rel="noopener" title="Open Tal Rasha tomb symbols full size">
-              <img  :src="tombRefUrl" alt="Tal Rasha tomb symbol reference" />
-            </a>
+
           </div>
 
           <div class="flex items-center text-[#514f4a]">
@@ -56,6 +54,8 @@
           </div>
         </div>
       </div>
+      <a class="rw-Header-tombLink" :href="tombRefUrl" target="_blank" rel="noopener" title="Open Tal Rasha tomb symbols full size"><img :src="tombRefUrl" alt="Tal Rasha tomb symbols quick reference" /></a>
+      <map-references class="rw-HeaderReferences" />
     </div>
 
     <!-- separator between header and main content, div simply extends to edges -->
@@ -73,6 +73,7 @@
 import { defineComponent } from "vue";
 
 import HelpBox from "@/components/HelpBox.vue";
+import MapReferences from "@/components/MapReferences.vue";
 import IconChat from "@/icons/IconChat.vue";
 import IconChevronDown from "@/icons/IconChevronDown.vue";
 
@@ -81,6 +82,7 @@ export default defineComponent({
 
   components: {
     HelpBox,
+    MapReferences,
     IconChat,
     IconChevronDown,
   },
