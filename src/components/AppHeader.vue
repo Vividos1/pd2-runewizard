@@ -30,8 +30,8 @@
                 >Update Notes</a
               >
             </span>
-            <a class="rw-Header-tombLink" href="/pd2-runewizard/tomb-reference.webp" target="_blank" rel="noopener" title="Open Tal Rasha tomb symbols full size">
-              <img src="/pd2-runewizard/tomb-reference.webp" alt="Tal Rasha tomb symbol reference" />
+            <a class="rw-Header-tombLink"  :href="tombRefUrl" target="_blank" rel="noopener" title="Open Tal Rasha tomb symbols full size">
+              <img  :src="tombRefUrl" alt="Tal Rasha tomb symbol reference" />
             </a>
           </div>
 
@@ -93,6 +93,7 @@ export default defineComponent({
       envGameVersion: import.meta.env.VITE_GAME_VERSION as string,
       envGithubRepoUrl: import.meta.env.VITE_URL_GITHUB_REPO as string,
       envPatchNotesUrl: import.meta.env.VITE_URL_PATCH_NOTES as string,
+      tombRefUrl: import.meta.env.BASE_URL + "tomb-reference.webp",
     };
   },
 });
