@@ -256,7 +256,7 @@ export default defineComponent({
         Delirium: ["Added +1 to Delirium Form (oskill).", "In Delirium Form, abilities cannot be used.", "Form grants -10% enemy physical resistance and Ignore Target's Defense."],
         Epiphany: ["Faster Cast Rate increased from 20% to 35%.", "Lightning damage increased from 1–750 to 1–1250."],
       };
-      return changes[item.title] || (item.version.includes("S14") ? ["New runeword introduced in Season 14 Alliance."] : ["Season 13 change. See archived Season 13 patch notes for the precise modifiers."]);
+      return changes[item.title] || (item.version?.includes("S14") ? ["New runeword introduced in Season 14 Alliance."] : ["Season 13 change. See archived Season 13 patch notes for the precise modifiers."]);
     },
     cssActiveRune(runeId: TRuneId) {
       return this.haveRunes[runeId] ? "is-active" : "";
