@@ -62,7 +62,13 @@
               @click="onEnterRuneword($event, item)"
             >{{ item.title }}</span>
             <span v-if="item.ladder" class="rw-Md-ladder" title="Ladder Only">L</span>
-            <span v-if="item.version" class="rw-Table-tdTitlePatch" :class="{ 'patch-s14': item.version.includes('S14'), 'patch-s13': item.version.includes('S13') }" title="Patch version">{{ item.version }}</span>
+            <span v-if="item.version" class="rw-PatchWrap" tabindex="0">
+              <span class="rw-Table-tdTitlePatch" :class="{ 'patch-s14': item.version.includes('S14'), 'patch-s13': item.version.includes('S13') }">{{ item.version }}</span>
+              <span class="rw-PatchTooltip" role="tooltip">
+                <strong>{{ item.title }} — {{ item.version }}</strong>
+                <span v-for="(line, n) in patchDetails(item)" :key="n">{{ line }}</span>
+              </span>
+            </span>
 
             <div
               v-if="pinnedRunewords.has(item.title)"
@@ -241,6 +247,17 @@ export default defineComponent({
   },
 
   methods: {
+    patchDetails(item: TRuneword): string[] {
+      const changes: Record<string,string[]> = {
+        Gloom: ["Removed 5% damage taken goes to mana.", "Added +1 to maximum curses.", "Faster Hit Recovery changed from 20–40% to 20%.", "Curse Resistance increased from 20% to 30–40%."],
+        Famine: ["Enemy fire resistance reduction increased from 10–15% to 15–20%.", "Enemy lightning resistance reduction increased from 10–15% to 15–20%.", "Enemy cold resistance reduction increased from 10–15% to 15–20%."],
+        "Hand of Justice": ["Holy Fire aura increased from level 12 to level 14."],
+        Eternity: ["Revive skill bonus increased from +4 to +12."],
+        Delirium: ["Added +1 to Delirium Form (oskill).", "In Delirium Form, abilities cannot be used.", "Form grants -10% enemy physical resistance and Ignore Target's Defense."],
+        Epiphany: ["Faster Cast Rate increased from 20% to 35%.", "Lightning damage increased from 1–750 to 1–1250."],
+      };
+      return changes[item.title] || (item.version.includes("S14") ? ["New runeword introduced in Season 14 Alliance."] : ["Season 13 change. See archived Season 13 patch notes for the precise modifiers."]);
+    },
     cssActiveRune(runeId: TRuneId) {
       return this.haveRunes[runeId] ? "is-active" : "";
     },
