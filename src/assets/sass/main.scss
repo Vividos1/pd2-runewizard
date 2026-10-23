@@ -514,3 +514,24 @@ a { color:var(--color-gold); }
 .rw-Table-tdType { width: auto; min-width: 0; max-width: 360px; padding-left: 3px; padding-right: 3px; }
 .rw-Table-th:nth-child(8) { padding-left: 4px; padding-right: 4px; }
 .rw-Table-td:last-child, .rw-Table-th:last-child { min-width: 46px; }
+
+/* Left-justified canvas rather than centered on wide monitors */
+.rw-Layout-rowContainer {margin-left:0;margin-right:0;max-width:1500px;}
+/* Season-change tooltip */
+.rw-PatchWrap {position:relative;display:inline-block;vertical-align:middle;cursor:help;}
+.rw-PatchTooltip {display:none;position:absolute;z-index:250;top:calc(100% + 6px);left:0;width:310px;padding:10px 12px;background:#121015;color:#e0d7c5;border:1px solid #a88146;border-radius:5px;box-shadow:0 9px 25px #000b;white-space:normal;font-size:12px;line-height:1.4;text-align:left;}
+.rw-PatchTooltip strong{display:block;color:#e6c182;margin-bottom:6px;}
+.rw-PatchTooltip > span{display:block;margin:3px 0;}
+.rw-PatchWrap:hover .rw-PatchTooltip,.rw-PatchWrap:focus .rw-PatchTooltip,.rw-PatchWrap:focus-within .rw-PatchTooltip{display:block;}
+/* Lightweight rune exchange-value sidebar */
+.rw-Values{margin-top:16px;width:130px;color:#ada696;font-size:11px;}
+.rw-Values-heading{display:flex;align-items:center;justify-content:space-between;color:#c7a76f;margin-bottom:6px;}
+.rw-Values-heading button{border:1px solid #72563c;border-radius:3px;padding:1px 6px;color:#e5c68d;background:#1b1720;}
+.rw-Values-heading button:disabled{opacity:.5}
+.rw-Values-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;}
+.rw-Values-table th{text-align:left;color:#b7a181;border-bottom:1px solid #554330;padding:3px;}
+.rw-Values-table th:last-child,.rw-Values-table td:last-child{text-align:right}
+.rw-Values-table td{padding:3px;border-bottom:1px solid #28231f;}
+.rw-Values-note{margin-top:6px;font-size:10px;line-height:1.4;color:#8e8578;}
+.rw-Values-error{font-size:10px;line-height:1.3;color:#d79b77;}
+.rw-Values a{font-size:10px;color:#cbaa6c;text-decoration:underline;}
