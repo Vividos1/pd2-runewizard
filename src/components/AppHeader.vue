@@ -30,6 +30,9 @@
                 >Update Notes</a
               >
             </span>
+            <a class="rw-Header-tombLink" href="/pd2-runewizard/tomb-reference.webp" target="_blank" rel="noopener" title="Open Tal Rasha tomb symbols full size">
+              <img src="/pd2-runewizard/tomb-reference.webp" alt="Tal Rasha tomb symbol reference" />
+            </a>
           </div>
 
           <div class="flex items-center text-[#514f4a]">
