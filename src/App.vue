@@ -4,6 +4,7 @@
   <main class="rw-Layout-rowContainer rw-Main py-3 flex mb-14">
     <div class="mr-5 rw-RuneSidebar">
       <runes />
+      <rune-values />
     </div>
     <div class="min-w-0 flex-1 rw-RunewordsContent">
       <runewords />
@@ -19,6 +20,7 @@ import { defineComponent } from "vue";
 import AppHeader from "@/components/AppHeader.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import Runes from "@/components/Runes.vue";
+import RuneValues from "@/components/RuneValues.vue";
 import Runewords from "@/components/Runewords.vue";
 
 export default defineComponent({
@@ -28,6 +30,7 @@ export default defineComponent({
     AppHeader,
     AppFooter,
     Runes,
+    RuneValues,
     Runewords,
   },
 
