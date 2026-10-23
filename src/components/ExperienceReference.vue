@@ -2,7 +2,7 @@
 <section class="rw-RefExp">
   <div class="rw-RefToolbar"><label>Character level <input v-model.number="level" type="number" min="1" max="99" /></label><span>Normal (N) · Nightmare (NM) · Hell (H)</span></div>
   <div class="rw-RefScroll"><table><thead><tr><th v-for="head in headings" :key="head">{{ head }}</th></tr></thead><tbody>
-    <tr v-for="row in visibleRows" :key="row[0]" :class="{ 'rw-RefSelected': Number(row[0])===level }"><td v-for="(cell,i) in row" :key="i">{{ i===0?cell:cell+'%' }}</td></tr>
+    <tr v-for="row in visibleRows" :key="row[0]" :class="{ 'rw-RefSelected': Number(row[0])===level }"><td v-for="(cell,i) in row" :key="i" :class="expCellClass(i, cell)">{{ i===0?cell:cell+'%' }}</td></tr>
   </tbody></table></div>
   <small>Experience-per-monster-level percentages from the supplied chart. The last column is the high-level experience penalty. Values are reproduced as supplied; not independently verified for PD2 S14.</small>
 </section>
@@ -14,6 +14,21 @@ const data="1,67,8,5,5,5,5,5,5,5,5,5,5,5,5,5,100\n2,77,9,5,5,5,5,5,5,5,5,5,5,5,5
 export default defineComponent({
  name:"ExperienceReference",data(){return {headings,level:1}},computed:{
  visibleRows():string[][]{let n=Number(this.level)||1;return data.filter(row=>Math.abs(Number(row[0])-n)<=5)}
+ },
+ methods:{
+ expCellClass(index:number,value:string):string {
+  if(index===0)return "rw-ExpLabel";
+  if(index===this.headings.length-1)return "rw-ExpPenalty";
+  const n=Number(value);
+  if(n>=95)return "rw-ExpTier rw-ExpTier--95";
+  if(n>=85)return "rw-ExpTier rw-ExpTier--85";
+  if(n>=70)return "rw-ExpTier rw-ExpTier--70";
+  if(n>=55)return "rw-ExpTier rw-ExpTier--55";
+  if(n>=40)return "rw-ExpTier rw-ExpTier--40";
+  if(n>=25)return "rw-ExpTier rw-ExpTier--25";
+  if(n>=10)return "rw-ExpTier rw-ExpTier--10";
+  return "rw-ExpTier rw-ExpTier--05";
+ }
  }
 });
 </script>

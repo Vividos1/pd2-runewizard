@@ -571,3 +571,19 @@ a { color:var(--color-gold); }
 .rw-HeaderReferences .rw-ReferenceButtons button {padding:5px 7px;white-space:nowrap;font-size:11px;}
 .rw-HeaderReferences .rw-ReferencePanel {position:absolute;top:calc(100% + 22px);left:0;width:min(1060px,calc(100vw - 32px));max-width:none;max-height:75vh;overflow:auto;box-shadow:0 12px 28px #000c;z-index:1000;}
 @media(max-width:1100px){.rw-HeaderBrand {flex-basis:350px}.rw-HeaderReferences {flex-basis:100%;padding-left:0}.rw-HeaderBar {gap:10px}.rw-HeaderReferences .rw-ReferencePanel{top:calc(100% + 12px)}}
+
+/* XP heatmap: override alternating rows/selected-row backgrounds, preserving a readable highlight. */
+.rw-RefExp .rw-RefScroll table th {background:#d0d0d0;color:#111;font-weight:700;text-align:center;}
+.rw-RefExp .rw-RefScroll table td {border:1px solid #5e3b3b;}
+.rw-RefExp .rw-RefScroll td.rw-ExpLabel {background:#d8d8d8;color:#111;font-weight:700;text-align:center;}
+.rw-RefExp .rw-RefScroll td.rw-ExpPenalty {background:#efefef;color:#111;font-weight:700;text-align:center;}
+.rw-RefExp .rw-RefScroll td.rw-ExpTier {text-align:center;font-weight:700;color:#111;}
+.rw-RefExp .rw-RefScroll td.rw-ExpTier--95 {background:#2f66ff;color:#fff;}
+.rw-RefExp .rw-RefScroll td.rw-ExpTier--85 {background:#56b8ff;}
+.rw-RefExp .rw-RefScroll td.rw-ExpTier--70 {background:#c8f3f3;}
+.rw-RefExp .rw-RefScroll td.rw-ExpTier--55 {background:#fff25a;}
+.rw-RefExp .rw-RefScroll td.rw-ExpTier--40 {background:#ffcc42;}
+.rw-RefExp .rw-RefScroll td.rw-ExpTier--25 {background:#ff9f2e;}
+.rw-RefExp .rw-RefScroll td.rw-ExpTier--10 {background:#ff5b2e;}
+.rw-RefExp .rw-RefScroll td.rw-ExpTier--05 {background:#ff2323;}
+.rw-RefExp .rw-RefScroll tr.rw-RefSelected td {outline:2px solid #f4e1a7;outline-offset:-2px;}
